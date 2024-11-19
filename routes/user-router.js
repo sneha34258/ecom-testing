@@ -108,6 +108,7 @@ userRouter.get("/", async (req, res) => {
   const banners = await Banner.find({});
   const categories = await Category.find({});
   const specials = await Product.find({ special: true });
+  console.log(banners)
   let count = null;
   if (user) {
     req.session.user.discount = null;
